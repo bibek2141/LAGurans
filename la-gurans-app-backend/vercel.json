@@ -2,14 +2,34 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.js",
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/la-gurans-app-frontend/browser",
+        "buildCommand": "npm ci && npm run build"
+      }
+    },
+    {
+      "src": "backend/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/backend/index.js"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/dist/la-gurans-app-frontend/browser/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(?:js|css|json|txt|html|ico|png|jpg|jpeg|svg|webp))",
+      "dest": "/dist/la-gurans-app-frontend/browser/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/dist/la-gurans-app-frontend/browser/index.html"
     }
   ]
 }
