@@ -44,4 +44,4 @@ app.post("/api/contact", async (req, res) => {
 });
 
 // Export as a serverless function
-module.exports = app; // Change this line to export the app
+module.exports = app;
