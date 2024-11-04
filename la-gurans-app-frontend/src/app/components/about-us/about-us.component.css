@@ -3,7 +3,7 @@
 }
 
 .carousel-image-container {
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -20,5 +20,11 @@
 @media (min-width: 768px) {
   .md\:h-96 {
     height: 29rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-image-container {
+    height: 350px;
   }
 }
