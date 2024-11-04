@@ -23,7 +23,8 @@ const transporter = nodemailer.createTransport({
 });
 
 // Contact form endpoint
-app.post("/contact", async (req, res) => {
+app.post("/api/contact", async (req, res) => {
+  // Adjusted the route to /api/contact
   const { name, email, message } = req.body;
 
   const mailOptions = {
@@ -42,6 +43,5 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// Export as a serverless function
+module.exports = app; // Change this line to export the app
