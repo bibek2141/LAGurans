@@ -2,22 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "styles/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "scripts/*",
-      "use": "@vercel/static"
+      "src": "la-guards-app-backend/**/*.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "/la-guards-app-backend/(.*)",
+      "dest": "la-guards-app-backend/$1"
     }
   ]
 }
