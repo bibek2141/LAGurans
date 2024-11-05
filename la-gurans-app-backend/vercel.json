@@ -1,3 +1,12 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  "version": 2,
+  "name": "la-gurans-app",
+  "builds": [
+    { "src": "la-gurans-app-backend/index.js", "use": "@vercel/node" },
+    { "src": "la-gurans-app-frontend/dist/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "la-gurans-app-backend/index.js" },
+    { "src": "/(.*)", "dest": "la-gurans-app-frontend/dist/$1" }
+  ]
 }
