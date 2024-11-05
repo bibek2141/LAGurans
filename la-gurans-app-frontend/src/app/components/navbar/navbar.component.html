@@ -130,7 +130,13 @@
       <a
         type="button"
         (click)="contactUs()"
-        class="text-white text-lg bg-black hover:bg-black focus:outline-none font-medium rounded-lg px-5 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-colors duration-200"
+        class="mt-6 inline-block bg-black text-white font-semibold py-2 px-4 rounded hover:bg-blue-700"
+      >
+        Contact Us
+      </a>
+      <a
+        [routerLink]="'/contact-us'"
+        class="mt-6 inline-block bg-black text-white font-semibold py-2 px-4 rounded hover:bg-blue-700"
       >
         Contact Us
       </a>
