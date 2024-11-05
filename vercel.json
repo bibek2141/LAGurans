@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "la-gurans-app-frontend/dist/la-gurans-app-frontend/**",
+      "src": "la-gurans-app-frontend/dist/la-gurans-app-frontend/browser/**",
       "use": "@vercel/static"
     }
   ],
