@@ -6,7 +6,6 @@ package-lock.json
 .env
 
 # Angular
-la-gurans-app-frontend/dist/
 la-gurans-app-frontend/.angular/
 la-gurans-app-frontend/src/environments/*.ts
 
