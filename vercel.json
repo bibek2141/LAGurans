@@ -14,8 +14,8 @@
       "dest": "la-gurans-app-frontend/dist/la-gurans-app-frontend/browser/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "/((?!api).*)",
+      "dest": "la-gurans-app-frontend/dist/la-gurans-app-frontend/browser/index.html"
     }
   ]
 }
