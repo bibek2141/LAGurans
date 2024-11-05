@@ -41,7 +41,7 @@
 
   <div class="mt-4 py-8 px-4">
     <div class="tabs-container">
-      <button
+      <a
         (click)="selectTab('fixtures')"
         [ngClass]="{
           'border-b-2 border-blue-600 text-blue-600': selectedTab === 'fixtures'
@@ -49,8 +49,8 @@
         class="py-2 px-4 font-semibold focus:outline-none"
       >
         Fixtures
-      </button>
-      <button
+      </a>
+      <a
         (click)="selectTab('standings')"
         [ngClass]="{
           'border-b-2 border-blue-600 text-blue-600':
@@ -59,8 +59,8 @@
         class="py-2 px-4 font-semibold focus:outline-none"
       >
         Standings
-      </button>
-      <button
+      </a>
+      <a
         (click)="selectTab('results')"
         [ngClass]="{
           'border-b-2 border-blue-600 text-blue-600': selectedTab === 'results'
@@ -68,7 +68,7 @@
         class="py-2 px-4 font-semibold focus:outline-none"
       >
         Results
-      </button>
+      </a>
     </div>
   </div>
 
