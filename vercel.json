@@ -6,18 +6,18 @@
       "use": "@vercel/node"
     },
     {
-      "src": "la-gurans-app-frontend/dist/la-gurans-app-frontend/**",
+      "src": "la-gurans-app-frontend/dist/la-gurans-app-frontend/**/*",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "la-gurans-app-backend/index.js"
+      "dest": "/la-gurans-app-backend/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "la-gurans-app-frontend/dist/la-gurans-app-frontend/$1"
+      "dest": "/la-gurans-app-frontend/dist/la-gurans-app-frontend/$1"
     }
   ]
 }
