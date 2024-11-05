@@ -1,7 +1,10 @@
 {
   "version": 2,
 
-  "builds": [{ "src": "la-gurans-backend/index.js", "use": "@vercel/node" }],
+  "builds": [
+    { "src": "la-gurans-backend/index.js", "use": "@vercel/node" },
+    { "src": "dist/browser/**", "use": "@vercel/static" }
+  ],
 
   "routes": [
     { "src": "/api(.*)", "dest": "la-gurans-backend/index.js" },
