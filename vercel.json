@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "la-gurans-backend/index.js",
+      "src": "la-gurans-app-backend/index.js",
       "use": "@vercel/node"
     },
     {
-      "src": "dist/la-gurans-app-frontend/browser/**",
+      "src": "la-gurans-app-frontend/dist/la-gurans-app-frontend/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "la-gurans-backend/index.js"
+      "dest": "la-gurans-app-backend/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/la-gurans-app-frontend/browser/$1"
+      "dest": "/la-gurans-app-frontend/dist/la-gurans-app-frontend/$1"
     }
   ]
 }
